@@ -1,3 +1,4 @@
+/*
 const PLAYER_X = 200;
 const GROUND_Y = 850;
 const PLAYER_RADIUS = 80;
@@ -107,7 +108,7 @@ class Hurdle {
     }
     return true;
   }
-}
+}*/
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
@@ -129,10 +130,12 @@ const buffer = document.createElement("canvas");
 const btx = buffer.getContext("2d");
 buffer.width = buffer.height = 1000;
 
+/*
 const playerImage = new Image();
 playerImage.src = "image/power-plant.png";
 const hurdleImage = new Image();
 hurdleImage.src = "image/conifer.png";
+*/
 
 const player = new Player();
 
@@ -150,15 +153,17 @@ const draw = () => {
     buffer.width / 2,
     buffer.height / 4
   );
-
+/*
   // 地面
   btx.fillStyle = "black";
   btx.fillRect(0, GROUND_Y, buffer.width, buffer.height - GROUND_Y);
 
   player.draw();
   game.hurdles.forEach(hurdle => hurdle.draw());
+*/
 }
 
+/*
 const update = () => {
   player.update();
   game.hurdles = game.hurdles.filter(hurdle => hurdle.update());
@@ -166,13 +171,13 @@ const update = () => {
   if (game.isRunning && game.hurdles.length < 1) {
     game.hurdles.push(new Hurdle());
   }
-}
+}*/
 
 const loop = () => {
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  update();
+  //update();
   draw();
 
   ctx.drawImage(
@@ -181,9 +186,10 @@ const loop = () => {
     0, 0, canvas.width, canvas.height
   );
 
-  window.requestAnimationFrame(loop);
+  //window.requestAnimationFrame(loop);
 }
 
+/*
 const onInput = (e) => {
   // ゲームオーバーの後、入力を受け付けない
   if (game.isOver) return;
@@ -197,12 +203,20 @@ const onInput = (e) => {
   if (player.jumpLives <= 0) return;
   player.jumpLives--;
   player.vy = -INITIAL_JUMP_V;
-}
+}*/
 
 window.onload = loop;
 
+
+/*
 if ("ontouchstart" in window) {
   window.ontouchend = onInput;
 } else {
   window.onclick = onInput;
-}
+}*/
+
+/*
+11/27/23:15
+改良
+
+*/
