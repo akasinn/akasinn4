@@ -1,4 +1,4 @@
-const version=83;
+const version=84;
 
 
 const canvas = document.getElementById("canvas");
@@ -34,9 +34,9 @@ const draw = () => {
     100
   );
   btx.fillStyle = "black";
-  btx.fillText("x",1075,1000);
-  btx.fillText("y",75,30);
-  btx.fillText("o",25,1080);
+  btx.fillText("x",1075,1025);
+  btx.fillText("y",77,32);
+  btx.fillText("o",25,1083);
   btx.save();
 
   //座標変換
@@ -98,5 +98,6 @@ window.onload = main;
 
 /*
 akasinn3から移植
-
+ver84
+xyoの位置を修正
 */
