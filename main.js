@@ -1,4 +1,4 @@
-const version=94;
+const version=95;
 
 
 const canvas = document.getElementById("canvas");
@@ -34,7 +34,7 @@ function mathmatical_function(x){
   for(var i=0;i<keta;i++){
     y=y.concat(y_array[i]);
   }
-  return y;
+  return Number(y);
 }
 
 const draw = () => {
@@ -149,4 +149,6 @@ ver93
 なぜか真っ白。軸も白い。.で点を表現
 ver94
 上手くいった。.を2だけ上に。目盛りを追加
+ver95
+yをちゃんとNumberにキャスト
 */
