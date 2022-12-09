@@ -1,4 +1,4 @@
-const version=93;
+const version=94;
 
 
 const canvas = document.getElementById("canvas");
@@ -55,6 +55,9 @@ const draw = () => {
   btx.fillText("x",1075,1025);
   btx.fillText("y",77,32);
   btx.fillText("o",25,1083);
+  btx.fillText("1",25,-50);
+  btx.fillText("1",1050,1075);
+
 
   btx.save();
 
@@ -90,7 +93,7 @@ const draw = () => {
     //const endAngle = Math.PI * 2; // 円孤の終点
   //  btx.arc(x, y,2,0,endAngle,true);
    // btx.fill();
-    btx.fillText(".",x,y);
+    btx.fillText(".",x,y+2);
   }
 
   btx.restore();
@@ -144,4 +147,6 @@ ver92
 真っ青。塗り忘れに気づく
 ver93
 なぜか真っ白。軸も白い。.で点を表現
+ver94
+上手くいった。.を2だけ上に。目盛りを追加
 */
