@@ -48,13 +48,14 @@ const draw = () => {
   btx.font = "60px serif";
   btx.fillText(
     "ver"+version,
-    1000,
+    400,
     100
   );
   btx.fillStyle = "black";
   btx.fillText("x",1075,1025);
   btx.fillText("y",77,32);
   btx.fillText("o",25,1083);
+
   btx.save();
 
   //座標変換
@@ -86,7 +87,7 @@ const draw = () => {
   btx.fillStyle = "white";
   for(var x=0;x<=1000;x++){
     const y=mathmatical_function(x);
-    btx.fillText("・",x,y);
+    ctx.arc(x, y,1,0,7,true);
   }
 
   btx.restore();
@@ -126,4 +127,6 @@ ver85
 グラフを描画
 ver86
 例のグラフを描画
+ver87
+verを左に。点を円で描く。
 */
