@@ -1,4 +1,4 @@
-const version=90;
+const version=91;
 
 
 const canvas = document.getElementById("canvas");
@@ -87,8 +87,9 @@ const draw = () => {
   btx.fillStyle = "white";
   for(var x=0;x<=1000;x++){
     const y=mathmatical_function(x);
-    var endAngle = Math.PI * 2; // 円孤の終点
-    ctx.arc(x, y,2,0,endAngle,true);
+    const endAngle = Math.PI * 2; // 円孤の終点
+    btx.arc(x, y,2,0,endAngle,true);
+    btx.fill();
   }
 
   btx.restore();
@@ -138,4 +139,7 @@ ver90
 円弧の終わりを修正。半径5->2
 ver91
 真っ青。math.PI*2が変になっていたので空白を入れる。
+ver92
+塗り忘れに気づく
+真っ青。
 */
