@@ -1,4 +1,4 @@
-const version=91;
+const version=92;
 
 
 const canvas = document.getElementById("canvas");
@@ -140,6 +140,5 @@ ver90
 ver91
 真っ青。math.PI*2が変になっていたので空白を入れる。
 ver92
-塗り忘れに気づく
-真っ青。
+真っ青。塗り忘れに気づく
 */
