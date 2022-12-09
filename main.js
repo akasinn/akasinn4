@@ -1,4 +1,4 @@
-const version=95;
+const version=96;
 
 
 const canvas = document.getElementById("canvas");
@@ -14,7 +14,7 @@ resize();
 
 const buffer = document.createElement("canvas");
 const btx = buffer.getContext("2d");
-buffer.width = buffer.height = 1100;
+buffer.width = buffer.height = 11000;
 
 
 function mathmatical_function(x){
@@ -47,53 +47,51 @@ const draw = () => {
   btx.textAlign = "center";
   btx.font = "60px serif";
   btx.fillText(
-    "ver"+version,
-    400,
-    100
+    "ver"+version,4000,1000
   );
   btx.fillStyle = "black";
-  btx.fillText("x",1075,1025);
-  btx.fillText("y",77,32);
-  btx.fillText("o",25,1083);
-  btx.fillText("1",25,-50);
-  btx.fillText("1",1050,1075);
+  btx.fillText("x",10750,10250);
+  btx.fillText("y",775,325);
+  btx.fillText("o",250,10835);
+  btx.fillText("1",250,500);
+  btx.fillText("1",10500,10850);
 
 
   btx.save();
 
   //座標変換
-  btx.translate(50,1050);
+  btx.translate(500,10500);
   btx.scale(1,-1);
 
   //軸
   btx.beginPath();
-  btx.moveTo(-40,5);
-  btx.lineTo(-5,5);
-  btx.lineTo(-5,1000);
-  btx.lineTo(-20,1000);
-  btx.lineTo(0,1040);
-  btx.lineTo(20,1000);
-  btx.lineTo(5,1000);
-  btx.lineTo(5,5);
-  btx.lineTo(1000,5);
-  btx.lineTo(1000,20);
-  btx.lineTo(1040,0);
-  btx.lineTo(1000,-20);
-  btx.lineTo(1000,-5);
-  btx.lineTo(5,-5);
-  btx.lineTo(5,-40);
-  btx.lineTo(-5,-40);
-  btx.lineTo(-5,-5);
-  btx.lineTo(-40,-5);
+  btx.moveTo(-400,50);
+  btx.lineTo(-50,50);
+  btx.lineTo(-50,10000);
+  btx.lineTo(-200,10000);
+  btx.lineTo(0,10400);
+  btx.lineTo(200,10000);
+  btx.lineTo(5,10000);
+  btx.lineTo(50,50);
+  btx.lineTo(10000,50);
+  btx.lineTo(10000,200);
+  btx.lineTo(10400,0);
+  btx.lineTo(10000,-200);
+  btx.lineTo(10000,-50);
+  btx.lineTo(50,-50);
+  btx.lineTo(50,-400);
+  btx.lineTo(-50,-400);
+  btx.lineTo(-50,-50);
+  btx.lineTo(-400,-50);
   btx.fill();
 
   btx.fillStyle = "white";
-  for(var x=0;x<=1000;x++){
+  for(var x=0;x<=10000;x++){
     const y=mathmatical_function(x);
     //const endAngle = Math.PI * 2; // 円孤の終点
   //  btx.arc(x, y,2,0,endAngle,true);
    // btx.fill();
-    btx.fillText(".",x,y+2);
+    btx.fillText(".",x,y+20);
   }
 
   btx.restore();
@@ -151,4 +149,6 @@ ver94
 上手くいった。.を2だけ上に。目盛りを追加
 ver95
 yをちゃんとNumberにキャスト
+ver96
+点を10倍に増やせる。解像度も同じく。
 */
