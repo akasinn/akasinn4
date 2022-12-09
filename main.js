@@ -1,4 +1,4 @@
-const version=85;
+const version=86;
 
 
 const canvas = document.getElementById("canvas");
@@ -18,9 +18,22 @@ buffer.width = buffer.height = 1100;
 
 
 function mathmatical_function(x){
-
-  const y=x*x;
-
+  const x_string=x+"";
+  const keta=x_string.length;
+  var y_array=[];
+  for(var i=0;i<keta;i++){
+    y_array=y_array.concat(x_string[i]);
+  }
+  for(var i=0;i<keta-1;i++){
+    if(x_string[i]==x_string[i+1]){
+      y_array[i]='0';
+      y_array[i+1]='0';
+    }
+  }
+  var y="";
+  for(var i=0;i<keta;i++){
+    y=y.concat(y_array[i]);
+  }
   return y;
 }
 
@@ -70,6 +83,7 @@ const draw = () => {
   btx.lineTo(-40,-5);
   btx.fill();
 
+  btx.fillStyle = "white";
   for(var x=0;x<=1000;x++){
     const y=mathmatical_function(x);
     btx.fillText("・",x,y);
@@ -108,4 +122,8 @@ window.onload = main;
 akasinn3から移植
 ver84
 xyoの位置を修正
+ver85
+グラフを描画
+ver86
+例のグラフを描画
 */
