@@ -1,4 +1,4 @@
-const version=92;
+const version=93;
 
 
 const canvas = document.getElementById("canvas");
@@ -87,9 +87,10 @@ const draw = () => {
   btx.fillStyle = "white";
   for(var x=0;x<=1000;x++){
     const y=mathmatical_function(x);
-    const endAngle = Math.PI * 2; // 円孤の終点
-    btx.arc(x, y,2,0,endAngle,true);
-    btx.fill();
+    //const endAngle = Math.PI * 2; // 円孤の終点
+  //  btx.arc(x, y,2,0,endAngle,true);
+   // btx.fill();
+    btx.fillText(".",x,y);
   }
 
   btx.restore();
@@ -141,4 +142,6 @@ ver91
 真っ青。math.PI*2が変になっていたので空白を入れる。
 ver92
 真っ青。塗り忘れに気づく
+ver93
+なぜか真っ白。軸も白い。.で点を表現
 */
