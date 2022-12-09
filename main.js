@@ -1,4 +1,4 @@
-const version=97;
+const version=98;
 
 
 const canvas = document.getElementById("canvas");
@@ -53,8 +53,8 @@ const draw = () => {
   btx.fillText("x",1075,1025);
   btx.fillText("y",77,32);
   btx.fillText("o",25,1083);
-  btx.fillText("1",25,50);
-  btx.fillText("1",1050,1085);
+  btx.fillText("1",25,70);
+  btx.fillText("1",1050,1090);
 
 
   btx.save();
@@ -74,7 +74,7 @@ const draw = () => {
   btx.lineTo(5,1000);
   btx.lineTo(5,5);
   btx.lineTo(1000,5);
-  btx.lineTo(100,20);
+  btx.lineTo(1000,20);
   btx.lineTo(1040,0);
   btx.lineTo(1000,-20);
   btx.lineTo(1000,-5);
@@ -153,4 +153,6 @@ ver96
 点を10倍に増やせる。解像度も同じく。
 ver97
 上手くいかなかったので、元通り
+ver98
+軸を修正。
 */
