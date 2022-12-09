@@ -1,4 +1,4 @@
-const version=86;
+const version=89;
 
 
 const canvas = document.getElementById("canvas");
@@ -87,7 +87,8 @@ const draw = () => {
   btx.fillStyle = "white";
   for(var x=0;x<=1000;x++){
     const y=mathmatical_function(x);
-    ctx.arc(x, y,5,0,7,true);
+    var endAngle = Math.PI + (Math.PI * j) / 2; // 円孤の終点
+    ctx.arc(x, y,5,0,endAngle,true);
   }
 
   btx.restore();
@@ -131,4 +132,6 @@ ver87
 verを左に。点を円で描く。
 ver88
 グラフが見えなかったので、円の半径を1->5
+ver89
+円弧の終わりをしっかり
 */
