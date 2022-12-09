@@ -1,4 +1,4 @@
-const version=84;
+const version=85;
 
 
 const canvas = document.getElementById("canvas");
@@ -17,7 +17,12 @@ const btx = buffer.getContext("2d");
 buffer.width = buffer.height = 1100;
 
 
+function mathmatical_function(x){
 
+  const y=x*x;
+
+  return y;
+}
 
 const draw = () => {
   // 背景
@@ -65,7 +70,10 @@ const draw = () => {
   btx.lineTo(-40,-5);
   btx.fill();
 
-
+  for(var x=0;x<=1000;x++){
+    const y=mathmatical_function(x);
+    btx.fillText("・",x,y);
+  }
 
   btx.restore();
 }
