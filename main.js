@@ -87,7 +87,7 @@ const draw = () => {
   btx.fillStyle = "white";
   for(var x=0;x<=1000;x++){
     const y=mathmatical_function(x);
-    ctx.arc(x, y,1,0,7,true);
+    ctx.arc(x, y,5,0,7,true);
   }
 
   btx.restore();
@@ -129,4 +129,6 @@ ver86
 例のグラフを描画
 ver87
 verを左に。点を円で描く。
+ver88
+グラフが見えなかったので、円の半径を1->5
 */
